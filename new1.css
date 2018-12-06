@@ -4,11 +4,11 @@ body {
     font-size: 18px;
 }
 
-.body {
+body {
     width: 1000px;
     margin: 20px auto;
     box-sizing: border-box;
-    background-color: white;
+    background-color: limegreen;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
