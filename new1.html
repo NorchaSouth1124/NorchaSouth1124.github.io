@@ -1,8 +1,47 @@
  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family="Oswald" rel="stylesheet"> <link rel="stylesheet" type="text/css" href="new1.css">
  <h1>Hi</h1>
- <p>
- <img src="https://goo.gl/images/enMk2K"  alt="skiing"/>
+ <p>Here is a fun little game.</p>
+
 
                                                       <a href="index.html">Home Page</a>
+ var enemyBlue = createSprite(200, 100);
+var enemyRed = createSprite(200, 300);
+World.frameRate = 9000;
+function draw() {
+  background("black");
+  enemyRed.setAnimation("enemyRed4_1");
+  enemyBlue.setAnimation("enemyBlue4_1");
+  if (keyDown("w")) {
+    enemyBlue.y = enemyBlue.y - 3;
+  }
+  if (keyDown("shift")) {
+    text("Use the arrow keys to move and press the a key to go invisible", 1, 300);
+  }
+  if (keyWentUp("a")) {
+    enemyRed.visible = true;
+  }
+  if (keyDown("a")) {
+    enemyRed.visible = false;
+  }
+  if (keyDown("down")) {
+    enemyRed.y = enemyRed.y + 3;
+  }
+  if (keyDown("up")) {
+    enemyRed.y = enemyRed.y - 3;
+  }
+  if (keyDown("left")) {
+    enemyRed.x = enemyRed.x - 3;
+  }
+  if (keyDown("right")) {
+    enemyRed.x = enemyRed.x + 3;
+  }
+  drawSprites();
+  rect(randomNumber(25, 375), randomNumber(25, 375), 10, 10);
+  drawSprites();
+  textSize(12);
+  text("press shift and hold to see instructions", 0, 15);
+  drawSprites();
+}
+
                                                      
