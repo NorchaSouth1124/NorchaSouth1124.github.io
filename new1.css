@@ -12,7 +12,7 @@ body {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
 }
 
-.header {
+body {
     border-bottom: 1px solid gray;
     display: flex;
     align-items: center;
